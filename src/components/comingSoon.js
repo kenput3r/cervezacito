@@ -2,6 +2,9 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
+import facebook from "../images/facebook.png"
+import instagram from "../images/instagram.png"
+import twitter from "../images/twitter.png"
 
 const Container = styled(BackgroundImage)`
   height: 100vh;
@@ -27,6 +30,23 @@ const Text = styled.div`
   font-size: 22px;
   padding: 10px;
 `
+const Footer = styled.div`
+  color: #fff;
+  width: 100%;
+
+  p {
+    text-align: center;
+    *:last-child {
+      margin-bottom: 1.45rem;
+    }
+  }
+
+  img {
+    height: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+`
 
 const ComingSoon = () => {
   const data = useStaticQuery(graphql`
@@ -45,7 +65,17 @@ const ComingSoon = () => {
       <Wrapper>
         <Text>COMING SOON</Text>
         <Text>COMING SOON</Text>
-        <Text>COMING SOON</Text>
+        <Footer>
+          <p>
+            309 W 4th St.
+            Santa Ana, CA 92701
+          </p>
+          <p>
+            <img src={facebook} alt="Facebook logo" />
+            <img src={instagram} alt="Instagram logo" />
+            <img src={twitter} alt="Twitter logo" />
+          </p>
+        </Footer>
       </Wrapper>
     </Container>
   )
