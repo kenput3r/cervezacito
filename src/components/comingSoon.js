@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import Img from "gatsby-image"
 import styled from "styled-components"
 import logo from "../images/icon.png"
 import facebook from "../images/facebook.png"
@@ -33,11 +34,52 @@ const Wrapper = styled.div`
     }
   }
 `
+const BlurWrapper = styled.div`
+  width: 100%; 
+  height: 100%; 
+  position: absolute; 
+  background-color: #fff;
+  z-index: 100;
+`
+const BlurLayer = styled(BackgroundImage)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute !important;
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+`
 const H1 = styled.h1`
   color: #fff;
   font-family: Rancho;
   margin-bottom: 0;
   text-align: center;
+`
+const H2 = styled.h2`
+  color: #fff;
+  font-family: Rancho;
+  text-align: center;
+`
+const Answers = styled.div`
+  color: #fff;
+  font-family: Rancho;
+  font-size: 1.62671rem;
+  margin-bottom: 0;
+  text-align: center;
+  button {
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    margin: 0 5px;
+    :hover {
+      border-bottom: 2px solid #fff;
+      cursor: pointer;
+    }
+  }
 `
 const Text = styled.div`
   color: #fff;
@@ -73,8 +115,38 @@ const Footer = styled.div`
     margin-bottom: 0;
   }
 `
+const NotLegal = styled.div`
+  background-color: #fff;
+  font-family: Rancho;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  max-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+
+  h1 {
+    font-family: Rancho;
+    text-align: center;
+  }
+  h2 {
+    font-family: Rancho;
+    text-align: center;
+  }
+  .image-wrapper {
+    max-width: 800px;
+    width: 100%;
+  }
+`
 
 const ComingSoon = () => {
+  const [isLegal, setIsLegal] = useState(null)
+  const [isFadingOut, setIsFadingOut] = useState(false)
+  const [opacity, setOpacity] = useState(1)
+  const [display, setDisplay] = useState('block')
   const data = useStaticQuery(graphql`
     query {
       backgroundImage: file(relativePath: { eq: "coming-soon.jpg" }) {
@@ -84,10 +156,52 @@ const ComingSoon = () => {
           }
         }
       }
+      blurredBackgroundImage: file(relativePath: { eq: "coming-soon_blurred.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      notLegalImage: file(relativePath: { eq: "nuts.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
+  const handleYes = () => {
+    setIsFadingOut(true)
+  }
+  const handleNo = () => {
+    setIsLegal(false)
+    setIsFadingOut(true)
+  }
+  useEffect(() => {
+    if(isFadingOut && opacity > 0) {
+      const fadeOut = window.setInterval(() => {
+        setOpacity(prevOpacity => prevOpacity - 0.1)
+      }, 20)
+      return () => {
+        window.clearInterval(fadeOut)
+      }
+    }else if(opacity < 0) {
+      setDisplay('none');
+    }
+  }, [isFadingOut, opacity])
   return (
     <Container fluid={data.backgroundImage.childImageSharp.fluid}>
+      <BlurWrapper style={{opacity: opacity, display: display}}>
+        <BlurLayer fluid={data.blurredBackgroundImage.childImageSharp.fluid}>
+          <H2>ARE YOU OF LEGAL DRINKING AGE?</H2>
+          <Answers>
+            <button onClick={handleYes}>YES</button> or <button onClick={handleNo}>NO</button>
+          </Answers>
+        </BlurLayer>
+      </BlurWrapper>
+      {isLegal !== false ?
       <Wrapper>
         <div>
           <img className="logo" src={logo} alt="Cervezacito logo" />
@@ -112,6 +226,15 @@ const ComingSoon = () => {
           </p>
         </Footer>
       </Wrapper>
+      :
+      <NotLegal>
+        <h1>NUTS!</h1>
+        <h2>You must be of legal drinking age to view this site</h2>
+        <div className="image-wrapper">
+          <Img fluid={data.notLegalImage.childImageSharp.fluid} alt="Peanuts" />
+        </div>
+      </NotLegal>
+      }
     </Container>
   )
 }
