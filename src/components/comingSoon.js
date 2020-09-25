@@ -67,6 +67,12 @@ const H2 = styled.h2`
   color: #fff;
   font-family: Rancho;
   text-align: center;
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60vw;
+  }
 `
 const Answers = styled.div`
   color: #fff;
@@ -214,7 +220,7 @@ const ComingSoon = () => {
       }, 20)
       return () => {
         setContentHeight("100%")
-        setContentOverflow("scroll")
+        setContentOverflow("visible")
         window.clearInterval(fadeOut)
       }
     } else if (opacity < 0) {
