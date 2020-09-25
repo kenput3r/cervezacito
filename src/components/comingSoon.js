@@ -49,7 +49,7 @@ const BlurLayer = styled(BackgroundImage)`
 const H1 = styled.h1`
   background-color: #a64023;
   color: #fff;
-  font-family: Rancho;
+  font-family: myriad-pro, sans-serif;
   margin-bottom: 0;
   padding: 10px 10px 5px 10px;
   text-align: center;
@@ -65,7 +65,7 @@ const H1 = styled.h1`
 `
 const H2 = styled.h2`
   color: #fff;
-  font-family: Rancho;
+  font-family: myriad-pro, sans-serif;
   text-align: center;
   .logo {
     display: block;
@@ -76,7 +76,7 @@ const H2 = styled.h2`
 `
 const Answers = styled.div`
   color: #fff;
-  font-family: Rancho;
+  font-family: myriad-pro, sans-serif;
   font-size: 1.62671rem;
   margin-bottom: 0;
   text-align: center;
@@ -96,13 +96,13 @@ const Text = styled.div`
   color: #fff;
   border: 3px solid #fff;
   display: inline-block;
-  font-family: Rancho;
+  font-family: myriad-pro, sans-serif;
   font-size: 2rem;
   padding: 10px;
 `
 const Footer = styled.div`
   color: #a64023;
-  font-family: Rancho;
+  font-family: myriad-pro, sans-serif;
   text-transform: uppercase;
   width: 100%;
 
@@ -128,7 +128,7 @@ const Footer = styled.div`
 `
 const NotLegal = styled.div`
   background-color: #fff;
-  font-family: Rancho;
+  font-family: myriad-pro, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,11 +140,11 @@ const NotLegal = styled.div`
   max-width: 100vw;
 
   h1 {
-    font-family: Rancho;
+    font-family: myriad-pro, sans-serif;
     text-align: center;
   }
   h2 {
-    font-family: Rancho;
+    font-family: myriad-pro, sans-serif;
     text-align: center;
   }
   .image-wrapper {
