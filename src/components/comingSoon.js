@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 `
 const BlurWrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: ${props => props.contentHeight};
   position: absolute;
   background-color: #fff;
   z-index: 100;
@@ -41,9 +41,9 @@ const BlurLayer = styled(BackgroundImage)`
   justify-content: center;
   align-items: center;
   position: absolute !important;
-  height: 100%;
+  height: ${props => props.contentHeight};
   width: 100%;
-  max-height: 100%;
+  max-height: ${props => props.contentHeight};
   max-width: 100%;
 `
 const H1 = styled.h1`
@@ -227,8 +227,14 @@ const ComingSoon = () => {
       contentHeight={contentHeight}
       contentOverflow={contentOverflow}
     >
-      <BlurWrapper style={{ opacity: opacity, display: display }}>
-        <BlurLayer fluid={data.blurredBackgroundImage.childImageSharp.fluid}>
+      <BlurWrapper
+        style={{ opacity: opacity, display: display }}
+        contentHeight={contentHeight}
+      >
+        <BlurLayer
+          fluid={data.blurredBackgroundImage.childImageSharp.fluid}
+          contentHeight={contentHeight}
+        >
           <H2>
             <img className="logo" src={logo_svg} alt="Cerveza Cito" />
             ARE YOU OF LEGAL DRINKING AGE?
