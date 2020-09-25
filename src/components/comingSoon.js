@@ -71,7 +71,7 @@ const H2 = styled.h2`
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 60vw;
+    max-width: 50vw;
   }
 `
 const Answers = styled.div`
