@@ -45,6 +45,10 @@ const BlurLayer = styled(BackgroundImage)`
   width: 100%;
   max-height: ${props => props.contentHeight};
   max-width: 100%;
+  @media (max-width: 420px) {
+    justify-content: flex-start;
+    padding-top: 10vh;
+  }
 `
 const H1 = styled.h1`
   background-color: #a64023;
@@ -241,14 +245,16 @@ const ComingSoon = () => {
           fluid={data.blurredBackgroundImage.childImageSharp.fluid}
           contentHeight={contentHeight}
         >
-          <H2>
-            <img className="logo" src={logo_svg} alt="Cerveza Cito" />
-            ARE YOU OF LEGAL DRINKING AGE?
-          </H2>
-          <Answers>
-            <button onClick={handleYes}>YES</button> or{" "}
-            <button onClick={handleNo}>NO</button>
-          </Answers>
+          <div>
+            <H2>
+              <img className="logo" src={logo_svg} alt="Cerveza Cito" />
+              ARE YOU OF LEGAL DRINKING AGE?
+            </H2>
+            <Answers>
+              <button onClick={handleYes}>YES</button> or{" "}
+              <button onClick={handleNo}>NO</button>
+            </Answers>
+          </div>
         </BlurLayer>
       </BlurWrapper>
       {isLegal !== false ? (
