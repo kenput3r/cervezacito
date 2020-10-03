@@ -10,7 +10,7 @@ import logo_svg from "../images/logo_tan.svg"
 import footer_png from "../images/footer.png"
 
 const Container = styled.div`
-  background-color: #f7ece3;
+  background-color: #f3e9e0;
   height: ${props => props.contentHeight};
   max-height: ${props => props.contentHeight};
   width: 100vw;
@@ -201,7 +201,7 @@ const ComingSoon = () => {
           }
         }
       }
-      menuImage: file(relativePath: { eq: "cerveza_cito_beer_menu_800.jpg" }) {
+      menuImage: file(relativePath: { eq: "cerveza_cito_beer_menu_2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048) {
             ...GatsbyImageSharpFluid
