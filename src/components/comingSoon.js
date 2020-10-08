@@ -201,7 +201,7 @@ const ComingSoon = () => {
           }
         }
       }
-      menuImage: file(relativePath: { eq: "cerveza_cito_beer_menu_2.jpg" }) {
+      menuImage: file(relativePath: { eq: "cerveza_cito_beer_menu_3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048) {
             ...GatsbyImageSharpFluid
