@@ -66,9 +66,16 @@ const Page = () => {
           <Wrapper
             contentHeight={contentHeight}
             contentOverflow={contentOverflow}
+            itemScope
+            itemType="http://schema.org/Menu"
           >
             <H1>
-              <img className="logo" src={logo_svg} alt="Cerveza Cito" />
+              <img
+                itemprop="image"
+                className="logo"
+                src={logo_svg}
+                alt="Cerveza Cito"
+              />
             </H1>
             <Menu />
             <Footer />

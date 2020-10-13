@@ -43,7 +43,7 @@ const Prices = styled.div`
 `
 const ImageContainer = styled.div`
   display: table-cell;
-  vertical-align: top;
+  vertical-align: middle;
   width: 20%;
 `
 const Image = styled(Img)``
