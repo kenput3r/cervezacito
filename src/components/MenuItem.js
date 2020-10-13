@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   display: table;
   font-family: myriad-pro, sans-serif;
   text-align: ${props => (props.align_left ? "left" : "right")};
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 100%;
 `
 const TextContainer = styled.div`
@@ -17,14 +17,31 @@ const TextContainer = styled.div`
 const Name = styled.h2`
   margin-bottom: 0;
   text-transform: uppercase;
+  @media (max-width: 375px) {
+    font-size: 1rem;
+    line-height: 1;
+  }
 `
 const Type = styled.div`
   text-transform: uppercase;
+  @media (max-width: 375px) {
+    font-size: 0.75rem;
+    line-height: 1;
+  }
 `
 const Description = styled.div`
   font-style: italic;
+  @media (max-width: 375px) {
+    font-size: 0.75rem;
+    line-height: 1;
+  }
 `
-const Prices = styled.div``
+const Prices = styled.div`
+  @media (max-width: 375px) {
+    font-size: 0.75rem;
+    line-height: 1;
+  }
+`
 const ImageContainer = styled.div`
   display: table-cell;
   vertical-align: top;

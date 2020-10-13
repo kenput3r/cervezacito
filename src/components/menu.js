@@ -1,12 +1,16 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import Img from "gatsby-image"
 import MenuItem from "../components/MenuItem"
 
 const Wrapper = styled.div`
   width: 640px;
   max-width: 100%;
+  padding: 10px 5px;
+`
+const H2 = styled.h2`
+  font-family: myriad-pro, sans-serif;
+  text-align: center;
 `
 const Menu = () => {
   const data = useStaticQuery(graphql`
@@ -64,11 +68,45 @@ const Menu = () => {
           }
         }
       }
+      theoHazyImage: file(
+        relativePath: { eq: "icons/theo_hazy_orangeblossom.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      wasshopImage: file(
+        relativePath: { eq: "icons/wasshop_rockers_hops.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      holyNotMoleImage: file(
+        relativePath: { eq: "icons/holy_not_mole_cinnamon.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      flightImage: file(relativePath: { eq: "icons/cerveza_cito_logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return (
     <Wrapper>
-      {/* <Img fluid={data.menuImage.childImageSharp.fluid} alt="The Menu" /> */}
+      <H2>BEER MENU</H2>
       <MenuItem
         align_left={true}
         fluid={data.lagerImage.childImageSharp.fluid}
@@ -122,6 +160,42 @@ const Menu = () => {
         type="Watermelon Seltzer...6.5%"
         description="Crisp, dry watermelon Seltzer with strong watermelon smell and light watermelon flavor."
         prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+      />
+      <MenuItem
+        align_left={true}
+        fluid={data.theoHazyImage.childImageSharp.fluid}
+        alt="Orangeblossom"
+        name="Theo Hazy IPA"
+        type="Hazy IPA...7.2%"
+        description="An unfiltered Hazy IPA brewed with El Dorado, Mosaic and Amarillo hops."
+        prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+      />
+      <MenuItem
+        align_left={false}
+        fluid={data.wasshopImage.childImageSharp.fluid}
+        alt="Hops"
+        name="Wasshop Rockers"
+        type="Double IPA...8.5%"
+        description="West Coast DIPA brewed with Huell Melon and Southern Cross hops."
+        prices="16oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
+      />
+      <MenuItem
+        align_left={true}
+        fluid={data.holyNotMoleImage.childImageSharp.fluid}
+        alt="Cinnamon"
+        name="Holy Not Mole"
+        type="Ibarra Mexican Chocolate Stout...8.8%"
+        description="Brewed with cinnamon, allspice and Ibarra Mexican Chocolate for a smooth, rich taste."
+        prices="16oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
+      />
+      <MenuItem
+        align_left={false}
+        fluid={data.flightImage.childImageSharp.fluid}
+        alt="Cerveza Cito"
+        name="Flight"
+        type="Four Tasters"
+        description="Get a taste of Cerveza Cito. Each flight includes four 5 oz pours of your choice."
+        prices="4 x 5oz...$8"
       />
     </Wrapper>
   )
