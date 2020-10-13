@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -46,14 +46,9 @@ const Wrapper = styled.div`
   overflow: ${props => props.contentOverflow};
 `
 const Page = () => {
-  const {
-    isLegal,
-    setIsLegal,
-    contentHeight,
-    setContentHeight,
-    contentOverflow,
-    setContentOverflow,
-  } = useContext(SiteContext)
+  const [contentHeight, setContentHeight] = useState("100vh")
+  const [contentOverflow, setContentOverflow] = useState("hidden")
+  const { isLegal, setIsLegal } = useContext(SiteContext)
   return (
     <Layout>
       <SEO title="Cerveza Cito Brewery" />
