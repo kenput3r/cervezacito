@@ -98,7 +98,7 @@ const VerifyAge = props => {
     } else if (opacity < 0) {
       setDisplay("none")
     }
-  }, [isFadingOut, opacity])
+  }, [isFadingOut, opacity, props, setDisplay, setOpacity])
   return (
     <BlurWrapper
       style={{ opacity: opacity, display: display }}

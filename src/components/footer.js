@@ -47,18 +47,22 @@ const Footer = () => {
         <a
           href="https://www.facebook.com/Cervezacito-104412328030927/"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
         >
           <img src={facebook} alt="Facebook logo" />
         </a>
         <a
           href="https://www.instagram.com/cervezacito/"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
         >
           <img src={instagram} alt="Instagram logo" />
         </a>
-        <a href="https://twitter.com/cervezacito">
+        <a
+          href="https://twitter.com/cervezacito"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img src={twitter} alt="Twitter logo" />
         </a>
       </p>
