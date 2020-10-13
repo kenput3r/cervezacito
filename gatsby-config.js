@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `A Santa Ana Brew Co`,
-    description: `The Cerveza Cito Brewery | Coming Soon`,
+    description: `The Cerveza Cito Brewery`,
     author: `@kenput3r`,
   },
   plugins: [
