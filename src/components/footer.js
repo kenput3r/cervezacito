@@ -3,6 +3,8 @@ import styled from "styled-components"
 import facebook from "../images/facebook.png"
 import instagram from "../images/instagram.png"
 import twitter from "../images/twitter.png"
+import youtube from "../images/youtube.png"
+import yelp from "../images/yelp.png"
 import footer_png from "../images/footer.png"
 
 const Wrapper = styled.footer`
@@ -20,7 +22,7 @@ const Wrapper = styled.footer`
 
   a {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 5px;
     padding: 5px 5px;
   }
 
@@ -64,6 +66,20 @@ const Footer = () => {
           rel="noreferrer"
         >
           <img src={twitter} alt="Twitter logo" />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCgCppvM-AD4p9rrnZ8vLdmg"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={youtube} alt="YouTube logo" />
+        </a>
+        <a
+          href="https://www.yelp.com/biz/cerveza-cito-santa-ana-3"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={yelp} alt="Yelp logo" />
         </a>
       </p>
       <FooterImage src={footer_png} alt="Cerveza Cito" />
