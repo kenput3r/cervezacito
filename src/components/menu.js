@@ -95,7 +95,9 @@ const Menu = () => {
           }
         }
       }
-      flightImage: file(relativePath: { eq: "icons/cerveza_cito_logo.png" }) {
+      flightImage: file(
+        relativePath: { eq: "icons/cerveza_cito_logo_padded_2.png" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 250) {
             ...GatsbyImageSharpFluid

@@ -3,8 +3,8 @@ import styled from "styled-components"
 import facebook from "../images/facebook.png"
 import instagram from "../images/instagram.png"
 import twitter from "../images/twitter.png"
-import youtube from "../images/youtube.png"
-import yelp from "../images/yelp.png"
+import youtube from "../images/youtube_2.png"
+import yelp from "../images/yelp_2.png"
 import footer_png from "../images/footer.png"
 
 const Wrapper = styled.footer`
