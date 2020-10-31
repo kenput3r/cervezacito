@@ -104,11 +104,27 @@ const Menu = () => {
           }
         }
       }
+      pricklyImage: file(relativePath: { eq: "icons/prickly.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return (
     <Wrapper>
       <H2>BEER MENU</H2>
+      <MenuItem
+        align_left={false}
+        fluid={data.pricklyImage.childImageSharp.fluid}
+        alt="Prickly Pair"
+        name="La Pearrona"
+        type="American Wheat Beer...5.5%"
+        description="Crisp wheat beer with a slight taste of prickly pear fruit."
+        prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+      />
       <MenuItem
         align_left={true}
         fluid={data.lagerImage.childImageSharp.fluid}
