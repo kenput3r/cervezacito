@@ -43,8 +43,8 @@ const Menu = () => {
           }
         }
       }
-      habaneroImage: file(
-        relativePath: { eq: "icons/pina_rubia_habanero.png" }
+      fantasmaImage: file(
+        relativePath: { eq: "icons/fantasma_ghost_chili.png" }
       ) {
         childImageSharp {
           fluid(maxWidth: 250) {
@@ -154,11 +154,11 @@ const Menu = () => {
       />
       <MenuItem
         align_left={false}
-        fluid={data.habaneroImage.childImageSharp.fluid}
-        alt="Habanero"
-        name="Habanero Piña Rubia"
-        type="Habanero Pineapple Blonde...5.8%"
-        description='Bursting with pineapple aroma and flavor with a kick of habanero! And if you ask, "si quema cuh."'
+        fluid={data.fantasmaImage.childImageSharp.fluid}
+        alt="Ghost Chili"
+        name="Fantasma Pale Ale"
+        type="Ghost Chili Pale Ale...6%"
+        description="Our Cito Pale Ale with strong, smokey flavor and Ghost Chili spice to heat things up."
         prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
       <MenuItem
