@@ -59,9 +59,7 @@ const Menu = () => {
           }
         }
       }
-      sandiaImage: file(
-        relativePath: { eq: "icons/sandia_seltzer_watermelon.png" }
-      ) {
+      slammerImage: file(relativePath: { eq: "icons/slammer_guava.png" }) {
         childImageSharp {
           fluid(maxWidth: 250) {
             ...GatsbyImageSharpFluid
@@ -172,11 +170,11 @@ const Menu = () => {
       />
       <MenuItem
         align_left={false}
-        fluid={data.sandiaImage.childImageSharp.fluid}
-        alt="Watermelon"
-        name="Sandia Seltzer"
-        type="Watermelon Seltzer...6.5%"
-        description="Crisp, dry watermelon Seltzer with strong watermelon smell and light watermelon flavor."
+        fluid={data.slammerImage.childImageSharp.fluid}
+        alt="Guava"
+        name="The Slammer"
+        type="POG Seltzer...7%"
+        description="Our POG (Pineapple, Orange, Guava) Seltzer is deliciously heavy on the citrus aroma but has a dry finish with a touch of sweetness."
         prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
       <MenuItem
