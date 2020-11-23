@@ -109,11 +109,41 @@ const Menu = () => {
           }
         }
       }
+      hazyImage: file(relativePath: { eq: "icons/haze_ventura_orange.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      guavaImage: file(relativePath: { eq: "icons/guava.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      pogImage: file(relativePath: { eq: "icons/POG.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return (
     <Wrapper>
       <H2>BEER MENU</H2>
+      <MenuItem
+        align_left={true}
+        fluid={data.guavaImage.childImageSharp.fluid}
+        alt="Guava"
+        name="Firme Lager With Guava"
+        type="Mexican Lager...5.3%"
+        description="Our popular Firme Lager infused with Guava for a touch of pink sweetness."
+        prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+      />
       <MenuItem
         align_left={false}
         fluid={data.pricklyImage.childImageSharp.fluid}
@@ -121,7 +151,7 @@ const Menu = () => {
         name="La Pearrona"
         type="American Wheat Beer...5.5%"
         description="Crisp wheat beer with a slight taste of prickly pear fruit."
-        prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+        prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
       <MenuItem
         align_left={true}
@@ -130,7 +160,7 @@ const Menu = () => {
         name="Firme Lager"
         type="Mexican Lager...5.7%"
         description="A light, refreshing Santa Ana style Mexican Lager."
-        prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+        prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
       <MenuItem
         align_left={false}
@@ -139,7 +169,7 @@ const Menu = () => {
         name="Firme Lager W/ Sea Salt & Lime"
         type="Mexican Lager...5.7%"
         description="Our Santa Ana style Mexican Lager with a touch of lime and sea salt."
-        prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+        prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
       <MenuItem
         align_left={true}
@@ -148,7 +178,7 @@ const Menu = () => {
         name="Piña Rubia"
         type="Pineapple Blonde...5.8%"
         description="Bursting with pineapple aroma and flavor this is the perfect summer beer!"
-        prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+        prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
       <MenuItem
         align_left={false}
@@ -157,7 +187,7 @@ const Menu = () => {
         name="Fantasma Pale Ale"
         type="Ghost Chili Pale Ale...6%"
         description="Our Cito Pale Ale with strong, smokey flavor and Ghost Chili spice to heat things up."
-        prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+        prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
       <MenuItem
         align_left={true}
@@ -166,28 +196,37 @@ const Menu = () => {
         name="Pale Ale"
         type="Pale Ale...6%"
         description="This perfect classic pale ale is brewed with Cascade and Laurel hops."
-        prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+        prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
       <MenuItem
         align_left={false}
-        fluid={data.slammerImage.childImageSharp.fluid}
+        fluid={data.hazyImage.childImageSharp.fluid}
+        alt="Orange"
+        name="Haze Ventura"
+        type="Hazy IPS...6.6%"
+        description="Our 100% Citra hopped Hazy IPA."
+        prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+      />
+      <MenuItem
+        align_left={true}
+        fluid={data.pogImage.childImageSharp.fluid}
         alt="Guava"
         name="The Slammer"
         type="POG Seltzer...7%"
         description="Our POG (Pineapple, Orange, Guava) Seltzer is deliciously heavy on the citrus aroma but has a dry finish with a touch of sweetness."
-        prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+        prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
       <MenuItem
-        align_left={true}
+        align_left={false}
         fluid={data.theoHazyImage.childImageSharp.fluid}
         alt="Orangeblossom"
         name="Theo Hazy IPA"
         type="Hazy IPA...7.2%"
         description="An unfiltered Hazy IPA brewed with El Dorado, Mosaic and Amarillo hops."
-        prices="20oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+        prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
       <MenuItem
-        align_left={false}
+        align_left={true}
         fluid={data.wasshopImage.childImageSharp.fluid}
         alt="Hops"
         name="Wasshop Rockers"
@@ -196,7 +235,7 @@ const Menu = () => {
         prices="16oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
       />
       <MenuItem
-        align_left={true}
+        align_left={false}
         fluid={data.holyNotMoleImage.childImageSharp.fluid}
         alt="Cinnamon"
         name="Holy Not Mole"
@@ -205,7 +244,7 @@ const Menu = () => {
         prices="16oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
       />
       <MenuItem
-        align_left={false}
+        align_left={true}
         fluid={data.flightImage.childImageSharp.fluid}
         alt="Cerveza Cito"
         name="Flight"
