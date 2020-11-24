@@ -135,7 +135,7 @@ const Menu = () => {
   return (
     <Wrapper>
       <H2>BEER MENU</H2>
-      <MenuItem
+      {/* <MenuItem
         align_left={true}
         fluid={data.guavaImage.childImageSharp.fluid}
         alt="Guava"
@@ -143,7 +143,7 @@ const Menu = () => {
         type="Mexican Lager...5.3%"
         description="Our popular Firme Lager infused with Guava for a touch of pink sweetness."
         prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
-      />
+      /> */}
       <MenuItem
         align_left={false}
         fluid={data.pricklyImage.childImageSharp.fluid}
