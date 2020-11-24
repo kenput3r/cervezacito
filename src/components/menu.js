@@ -203,7 +203,7 @@ const Menu = () => {
         fluid={data.hazyImage.childImageSharp.fluid}
         alt="Orange"
         name="Haze Ventura"
-        type="Hazy IPS...6.6%"
+        type="Hazy IPA...6.6%"
         description="Our 100% Citra hopped Hazy IPA."
         prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
