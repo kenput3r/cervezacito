@@ -17,8 +17,29 @@ const Container = styled.div`
   max-width: 100vw;
   overflow: ${props => props.contentOverflow};
 `
-const H1 = styled.h1`
+const Row = styled.div`
   background-color: #a64023;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  .flex {
+    display: flex;
+    flex: 1;
+  }
+  .shop-link {
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: myriad-pro, sans-serif;
+    font-weight: bold;
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+    }
+  }
+`
+const H1 = styled.h1`
   color: #fff;
   font-family: myriad-pro, sans-serif;
   margin-bottom: 0;
@@ -69,14 +90,28 @@ const Page = () => {
             itemScope
             itemType="http://schema.org/Menu"
           >
-            <H1>
-              <img
-                itemprop="image"
-                className="logo"
-                src={logo_svg}
-                alt="Cerveza Cito"
-              />
-            </H1>
+            <Row>
+              <div className="flex"></div>
+              <div className="flex">
+                <H1>
+                  <img
+                    itemprop="image"
+                    className="logo"
+                    src={logo_svg}
+                    alt="Cerveza Cito"
+                  />
+                </H1>
+              </div>
+              <div className="flex shop-link">
+                <a
+                  href="https://www.suavecito.com/collections/cerveza-cito"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  SHOP
+                </a>
+              </div>
+            </Row>
             <Menu />
             <Footer />
           </Wrapper>
