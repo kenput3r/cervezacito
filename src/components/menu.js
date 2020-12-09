@@ -15,13 +15,6 @@ const H2 = styled.h2`
 const Menu = () => {
   const data = useStaticQuery(graphql`
     query {
-      menuImage: file(relativePath: { eq: "cerveza_cito_beer_menu_4.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 2048) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       lagerImage: file(relativePath: { eq: "icons/firme_lager_barley.png" }) {
         childImageSharp {
           fluid(maxWidth: 250) {
@@ -116,14 +109,14 @@ const Menu = () => {
           }
         }
       }
-      guavaImage: file(relativePath: { eq: "icons/guava.png" }) {
+      pogImage: file(relativePath: { eq: "icons/POG.png" }) {
         childImageSharp {
           fluid(maxWidth: 250) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      pogImage: file(relativePath: { eq: "icons/POG.png" }) {
+      choloWater: file(relativePath: { eq: "icons/pilsner_cholo_water.png" }) {
         childImageSharp {
           fluid(maxWidth: 250) {
             ...GatsbyImageSharpFluid
@@ -135,15 +128,15 @@ const Menu = () => {
   return (
     <Wrapper>
       <H2>BEER MENU</H2>
-      {/* <MenuItem
+      <MenuItem
         align_left={true}
-        fluid={data.guavaImage.childImageSharp.fluid}
-        alt="Guava"
-        name="Firme Lager With Guava"
-        type="Mexican Lager...5.3%"
-        description="Our popular Firme Lager infused with Guava for a touch of pink sweetness."
+        fluid={data.choloWater.childImageSharp.fluid}
+        alt="Pilsner Glass"
+        name="Cholo Water"
+        type="Pilsner...4.9%"
+        description="Our low ABV, light and crushable bohemian Pilsner."
         prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
-      /> */}
+      />
       <MenuItem
         align_left={false}
         fluid={data.pricklyImage.childImageSharp.fluid}
