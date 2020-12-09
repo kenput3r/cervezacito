@@ -151,7 +151,7 @@ const Menu = () => {
         fluid={data.lagerImage.childImageSharp.fluid}
         alt="Barley"
         name="Firme Lager"
-        type="Mexican Lager...5.7%"
+        type="Mexican Lager...5.3%"
         description="A light, refreshing Santa Ana style Mexican Lager."
         prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
@@ -160,7 +160,7 @@ const Menu = () => {
         fluid={data.lagerLimeImage.childImageSharp.fluid}
         alt="Lime"
         name="Firme Lager W/ Sea Salt & Lime"
-        type="Mexican Lager...5.7%"
+        type="Mexican Lager...5.3%"
         description="Our Santa Ana style Mexican Lager with a touch of lime and sea salt."
         prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
@@ -225,7 +225,7 @@ const Menu = () => {
         name="Wasshop Rockers"
         type="Double IPA...8.5%"
         description="West Coast DIPA brewed with Huell Melon and Southern Cross hops."
-        prices="16oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
+        prices="12oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
       />
       <MenuItem
         align_left={false}
@@ -234,7 +234,7 @@ const Menu = () => {
         name="Holy Not Mole"
         type="Ibarra Mexican Chocolate Stout...8.8%"
         description="Brewed with cinnamon, allspice and Ibarra Mexican Chocolate for a smooth, rich taste."
-        prices="16oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
+        prices="12oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
       />
       <MenuItem
         align_left={true}
