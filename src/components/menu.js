@@ -151,7 +151,7 @@ const Menu = () => {
         fluid={data.lagerImage.childImageSharp.fluid}
         alt="Barley"
         name="Firme Lager"
-        type="Mexican Lager...5.7%"
+        type="Mexican Lager...5.3%"
         description="A light, refreshing Santa Ana style Mexican Lager."
         prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
@@ -160,7 +160,7 @@ const Menu = () => {
         fluid={data.lagerLimeImage.childImageSharp.fluid}
         alt="Lime"
         name="Firme Lager W/ Sea Salt & Lime"
-        type="Mexican Lager...5.7%"
+        type="Mexican Lager...5.3%"
         description="Our Santa Ana style Mexican Lager with a touch of lime and sea salt."
         prices="16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
       />
