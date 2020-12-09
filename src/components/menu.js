@@ -225,7 +225,7 @@ const Menu = () => {
         name="Wasshop Rockers"
         type="Double IPA...8.5%"
         description="West Coast DIPA brewed with Huell Melon and Southern Cross hops."
-        prices="16oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
+        prices="12oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
       />
       <MenuItem
         align_left={false}
@@ -234,7 +234,7 @@ const Menu = () => {
         name="Holy Not Mole"
         type="Ibarra Mexican Chocolate Stout...8.8%"
         description="Brewed with cinnamon, allspice and Ibarra Mexican Chocolate for a smooth, rich taste."
-        prices="16oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
+        prices="12oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
       />
       <MenuItem
         align_left={true}
