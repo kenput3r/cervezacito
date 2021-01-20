@@ -8,22 +8,6 @@
     "prices": "16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
   },
   {
-    "image": "./images/caramel.png",
-    "alt": "Melted Caramel",
-    "name": "Mi Morena",
-    "type": "Amber Lager...5.4%",
-    "description": "Dark, rich lager with hints of caramel",
-    "prices": "16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
-  },
-  {
-    "image": "./images/prickly.png",
-    "alt": "Prickly Pair",
-    "name": "La Pearrona",
-    "type": "American Wheat Beer...5.5%",
-    "description": "Crisp wheat beer with a slight taste of prickly pear fruit.",
-    "prices": "16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
-  },
-  {
     "image": "./images/firme_lager_barley.png",
     "alt": "Barley",
     "name": "Firme Lager",
@@ -40,11 +24,19 @@
     "prices": "16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
   },
   {
-    "image": "./images/tarta_buena_mango.png",
-    "alt": "Mango",
-    "name": "Tarta Buena",
-    "type": "Coconut & Mango Sour...6%",
-    "description": "Sweet, tart and bursting with mango and coconut aroma.",
+    "image": "./images/caramel.png",
+    "alt": "Melted Caramel",
+    "name": "Mi Morena",
+    "type": "Amber Lager...5.4%",
+    "description": "Dark, rich lager with hints of caramel",
+    "prices": "16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+  },
+  {
+    "image": "./images/prickly.png",
+    "alt": "Prickly Pair",
+    "name": "La Pearrona",
+    "type": "American Wheat Beer...5.5%",
+    "description": "Crisp wheat beer with a slight taste of prickly pear fruit.",
     "prices": "16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
   },
   {
@@ -103,6 +95,14 @@
     "description": "West Coast DIPA brewed with Huell Melon and Southern Cross hops.",
     "prices": "12oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
   },
+  {
+    "image": "./images/pale_ale_hops.png",
+    "alt": "Hops",
+    "name": "Guilded Together OC Brewers Guild Collab",
+    "type": "West Coast DIPA...8.6%",
+    "description": "Brewed in collaboration with several OC breweries and the OC Brewers Guild this west coast DIPA is made with Centennial, Amarillo and Tropicali.",
+    "prices": "12oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
+  }, 
   {
     "image": "./images/holy_not_mole_cinnamon.png",
     "alt": "Cinnamon",
