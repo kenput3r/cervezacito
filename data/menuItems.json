@@ -104,14 +104,6 @@
     "prices": "12oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
   }, 
   {
-    "image": "./images/holy_not_mole_cinnamon.png",
-    "alt": "Cinnamon",
-    "name": "Holy Not Mole",
-    "type": "Ibarra Mexican Chocolate Stout...8.8%",
-    "description": "Brewed with cinnamon, allspice and Ibarra Mexican Chocolate for a smooth, rich taste.",
-    "prices": "12oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
-  },
-  {
     "image": "./images/cerveza_cito_logo_padded_2.png",
     "alt": "Cerveza Cito",
     "name": "Flight",
