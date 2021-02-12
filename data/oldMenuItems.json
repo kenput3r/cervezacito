@@ -22,5 +22,13 @@
     "type": "Ibarra Mexican Chocolate Stout...8.8%",
     "description": "Brewed with cinnamon, allspice and Ibarra Mexican Chocolate for a smooth, rich taste.",
     "prices": "12oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
+  },
+  {
+    "image": "./images/wasshop_rockers_hops.png",
+    "alt": "Hops",
+    "name": "Wasshop Rockers",
+    "type": "Double IPA...8.5%",
+    "description": "West Coast DIPA brewed with Huell Melon and Southern Cross hops.",
+    "prices": "12oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
   }
 ]
