@@ -30,5 +30,13 @@
     "type": "Double IPA...8.5%",
     "description": "West Coast DIPA brewed with Huell Melon and Southern Cross hops.",
     "prices": "12oz...$7 | 5oz...$3 | 32oz Crowler (To-Go)...$16"
+  },
+  {
+    "image": "./images/firme_lager_lime.png",
+    "alt": "Lime",
+    "name": "Firme Lager W/ Sea Salt & Lime",
+    "type": "Mexican Lager...5.3%",
+    "description": "Our Santa Ana style Mexican Lager with a touch of lime and sea salt.",
+    "prices": "16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
   }
 ]
