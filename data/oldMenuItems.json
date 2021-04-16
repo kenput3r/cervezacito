@@ -38,5 +38,13 @@
     "type": "Mexican Lager...5.3%",
     "description": "Our Santa Ana style Mexican Lager with a touch of lime and sea salt.",
     "prices": "16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
+  },
+  {
+    "image": "./images/holy_not_mole_cinnamon.png",
+    "alt": "Cinnamon sticks",
+    "name": "La Chata",
+    "type": "Stout...5.8%",
+    "description": "Smooth coconut rye stout.",
+    "prices": "16oz...$7 | 5oz...$2 | 32oz Crowler (To-Go)...$14"
   }
 ]
