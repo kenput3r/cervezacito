@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Static Events Form</title>
+  </head>
+  <body>
+    <form name="Event" method="Post" data-netlify="true">
+      <input type="hidden" name="form-name" value="Event" />
+      <div>
+        <label for="Name"
+          >Name
+          <input type="text" name="Name" id="Name" />
+        </label>
+      </div>
+
+      <div>
+        <label for="Email"
+          >Email
+          <input type="email" name="Email" id="Email" />
+        </label>
+      </div>
+
+      <div>
+        <label for="Phone"
+          >Phone
+          <input type="tel" name="Phone" id="Phone" />
+        </label>
+      </div>
+
+      <div className="form-group">
+        <label for="Guests">
+          Party Size
+          <select name="Guests" id="Guests">
+            <option value="10 - 20">10 - 20</option>
+            <option value="20 - 40">20 - 40</option>
+            <option value="40+">40+</option>
+          </select>
+        </label>
+
+        <label for="Date">
+          Date
+          <input type="date" name="Date" id="Date" />
+        </label>
+      </div>
+
+      <div>
+        <input type="submit" value="REQUEST DATE" />
+      </div>
+    </form>
+  </body>
+</html>

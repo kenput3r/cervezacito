@@ -4,10 +4,105 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import VerifyAge from "../components/VerifyAge"
 import Menu from "../components/menu"
+import Contact from "../components/contact"
+import PrivateEvents from "../components/private-events"
 import NotLegal from "../components/NotLegal"
 import Footer from "../components/footer"
 import logo_svg from "../images/logo_tan.svg"
 import { SiteContext } from "../context"
+
+const Page = () => {
+  const [contentHeight, setContentHeight] = useState("100vh")
+  const [contentOverflow, setContentOverflow] = useState("hidden")
+  const { isLegal, setIsLegal, activeComponent, setActiveComponent } = useContext(SiteContext)
+
+  const changeView = (e, component) => {
+    e.preventDefault()
+    setActiveComponent(component)
+  }
+  return (
+    <Layout>
+      <SEO title="Cerveza Cito Brewery" />
+      <Container
+        contentHeight={contentHeight}
+        contentOverflow={contentOverflow}
+        className={activeComponent === "contact" ? `fill` : ``}
+      >
+        <VerifyAge
+          contentHeight={contentHeight}
+          setIsLegal={setIsLegal}
+          setContentHeight={setContentHeight}
+          setContentOverflow={setContentOverflow}
+        />
+        {isLegal && (
+          <Wrapper
+            contentHeight={contentHeight}
+            contentOverflow={contentOverflow}
+            itemScope
+            itemType="http://schema.org/Menu"
+            className="wrapper"
+          >
+            <Row>
+              <div className="flex spacer"></div>
+              <div className="flex">
+                <H1>
+                  <img
+                    itemProp="image"
+                    className="logo"
+                    src={logo_svg}
+                    alt="Cerveza Cito"
+                  />
+                </H1>
+              </div>
+              <div className="flex shop-link">
+                <a
+                  href="/#menu"
+                  role="button"
+                  className={activeComponent === "menu" ? `active` : ``}
+                  onClick={e => changeView(e, "menu")}
+                >
+                  MENU
+                </a>
+                <a
+                  href="/#contact"
+                  role="button"
+                  className={activeComponent === "contact" ? `active` : ``}
+                  onClick={e => changeView(e, "contact")}
+                >
+                  CONTACT
+                </a>
+                <a
+                  href="/#events"
+                  role="button"
+                  className={activeComponent === "private events" ? `active` : ``}
+                  onClick={e => changeView(e, "private events")}
+                >
+                  PRIVATE EVENTS
+                </a>
+                <a
+                  href="https://www.suavecito.com/collections/cerveza-cito"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  SHOP
+                </a>
+              </div>
+            </Row>
+            {activeComponent === "menu" && <Menu />}
+            {activeComponent === "contact" && <Contact />}
+            {activeComponent === "private events" && <PrivateEvents />}
+            <Footer />
+          </Wrapper>
+        )}
+        {!isLegal && (
+          <NotLegal />
+        )}
+      </Container>
+    </Layout>
+  )
+}
+
+export default Page
 
 const Container = styled.div`
   background-color: #f3e9e0;
@@ -16,6 +111,12 @@ const Container = styled.div`
   width: 100vw;
   max-width: 100vw;
   overflow: ${props => props.contentOverflow};
+  &.fill {
+    min-height: 100vh;
+    .wrapper {
+      min-height: 100vh;
+    }
+  }
 `
 const Row = styled.div`
   background-color: #a64023;
@@ -36,6 +137,22 @@ const Row = styled.div`
       color: #fff;
       text-decoration: none;
       padding: 10px;
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+  @media (max-width: 1279px) {
+    flex-wrap: wrap;
+    .flex {
+      flex: none;
+      width: 100%;
+    }
+    .spacer {
+      display: none;
+    }
+    .shop-link {
+      justify-content: center;
     }
   }
 `
@@ -66,61 +183,3 @@ const Wrapper = styled.div`
   max-width: 100vw;
   overflow: ${props => props.contentOverflow};
 `
-const Page = () => {
-  const [contentHeight, setContentHeight] = useState("100vh")
-  const [contentOverflow, setContentOverflow] = useState("hidden")
-  const { isLegal, setIsLegal } = useContext(SiteContext)
-  return (
-    <Layout>
-      <SEO title="Cerveza Cito Brewery" />
-      <Container
-        contentHeight={contentHeight}
-        contentOverflow={contentOverflow}
-      >
-        <VerifyAge
-          contentHeight={contentHeight}
-          setIsLegal={setIsLegal}
-          setContentHeight={setContentHeight}
-          setContentOverflow={setContentOverflow}
-        />
-        {isLegal !== false ? (
-          <Wrapper
-            contentHeight={contentHeight}
-            contentOverflow={contentOverflow}
-            itemScope
-            itemType="http://schema.org/Menu"
-          >
-            <Row>
-              <div className="flex"></div>
-              <div className="flex">
-                <H1>
-                  <img
-                    itemprop="image"
-                    className="logo"
-                    src={logo_svg}
-                    alt="Cerveza Cito"
-                  />
-                </H1>
-              </div>
-              <div className="flex shop-link">
-                <a
-                  href="https://www.suavecito.com/collections/cerveza-cito"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  SHOP
-                </a>
-              </div>
-            </Row>
-            <Menu />
-            <Footer />
-          </Wrapper>
-        ) : (
-          <NotLegal />
-        )}
-      </Container>
-    </Layout>
-  )
-}
-
-export default Page

@@ -64,6 +64,7 @@ const VerifyAge = props => {
     setDisplay,
     isFadingOut,
     setIsFadingOut,
+    setIsLegal
   } = useContext(SiteContext)
   const data = useStaticQuery(graphql`
     query {
@@ -80,6 +81,7 @@ const VerifyAge = props => {
   `)
   const handleYes = () => {
     setIsFadingOut(true)
+    setIsLegal(true)
   }
   const handleNo = () => {
     props.setIsLegal(false)

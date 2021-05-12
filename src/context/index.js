@@ -9,6 +9,7 @@ export const SiteProvider = ({ children }) => {
   const [display, setDisplay] = useState("block")
   const [contentHeight, setContentHeight] = useState("100vh")
   const [contentOverflow, setContentOverflow] = useState("hidden")
+  const [activeComponent, setActiveComponent] = useState("menu")
 
   return (
     <SiteContext.Provider
@@ -25,6 +26,8 @@ export const SiteProvider = ({ children }) => {
         setContentHeight,
         contentOverflow,
         setContentOverflow,
+        activeComponent,
+        setActiveComponent
       }}
     >
       {children}
