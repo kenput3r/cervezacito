@@ -67,7 +67,7 @@ const Component = styled.div`
   }
   .info {
     width: 480px;
-    max-width: 100%;
+    max-width: 100vw;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -76,9 +76,11 @@ const Component = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    max-width: 100vw;
     > div {
       padding: 1.45rem;
       width: 480px;
+      max-width: 100%;
     }
   }
 
