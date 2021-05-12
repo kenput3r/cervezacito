@@ -71,14 +71,14 @@ const Page = () => {
                 >
                   CONTACT
                 </a>
-                {/* <a
+                <a
                   href="/#events"
                   role="button"
                   className={activeComponent === "private events" ? `active` : ``}
                   onClick={e => changeView(e, "private events")}
                 >
                   PRIVATE EVENTS
-                </a> */}
+                </a>
                 <a
                   href="https://www.suavecito.com/collections/cerveza-cito"
                   target="_blank"
