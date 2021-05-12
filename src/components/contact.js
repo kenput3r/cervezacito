@@ -8,6 +8,7 @@ const Contact = () => {
       <div className="row">
         <div>
           <form name="Contact" method="Post" data-netlify="true">
+            <input type="hidden" name="form-name" value="Contact" />
             <div>
               <label htmlFor="Name">Name
                 <input type="text" name="Name" id="Name" />
