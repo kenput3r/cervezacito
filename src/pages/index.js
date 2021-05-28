@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import VerifyAge from "../components/VerifyAge"
-import Menu from "../components/menu"
+import UntappdMenu from "../components/untappd-menu"
 import Contact from "../components/contact"
 import PrivateEvents from "../components/private-events"
 import NotLegal from "../components/NotLegal"
@@ -88,7 +88,7 @@ const Page = () => {
                 </a>
               </div>
             </Row>
-            {activeComponent === "menu" && <Menu />}
+            {activeComponent === "menu" && <UntappdMenu />}
             {activeComponent === "contact" && <Contact />}
             {activeComponent === "private events" && <PrivateEvents />}
             <Footer />
