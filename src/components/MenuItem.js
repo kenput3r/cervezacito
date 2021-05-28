@@ -49,7 +49,7 @@ const ImageContainer = styled.div`
 const Image = styled(Img)``
 const MenuItem = props => {
   return (
-    <Wrapper align_left={props.align_left}>
+    <Wrapper align_left={props.align_left} className={props.className}>
       {!props.align_left && (
         <ImageContainer>
           <Image fluid={props.fluid} alt={props.alt} />
