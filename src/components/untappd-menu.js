@@ -48,18 +48,23 @@ const UntappdMenu = () => {
   return (
     <Wrapper>
       <H2>BEER MENU</H2>
-      {sortedMenu.map(({ node }, index) => (
+      {sortedMenu.map(({ node }, index) => {
+        const description = node.description ? node.description : node.original_description
+        const fluid = node.customRemoteImage ? node.customRemoteImage.childImageSharp.fluid : node.originalRemoteImage.childImageSharp.fluid
+        console.log(description)
+        return (
         <MenuItem
           key={node.id}
           align_left={++index % 2 === 0 ? true : false}
-          fluid={node.customRemoteImage ? node.customRemoteImage.childImageSharp.fluid : node.originalRemoteImage.childImageSharp.fluuid}
+          fluid={fluid}
           alt={node.custom_name ? node.custom_name : node.original_name}
           name={node.custom_name ? node.custom_name : node.original_name}
           type={node.custom_style ? node.custom_style : node.original_style}
-          description={node.description ? node.custom_description : node.original_description}
+          description={description}
           prices={node.custom_abv && parseFloat(node.custom_abv) > 8 ? highAbvPrices : node.original_brewery !== "Cerveza Cito" ? guestTapPrices : prices}
         />
-      ))}
+      )
+      })}
     </Wrapper>
   )
 
