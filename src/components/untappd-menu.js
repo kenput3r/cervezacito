@@ -62,6 +62,7 @@ const UntappdMenu = () => {
           type={node.custom_style ? node.custom_style : node.original_style}
           description={description}
           prices={node.custom_abv && parseFloat(node.custom_abv) > 8 ? highAbvPrices : node.original_brewery !== "Cerveza Cito" ? guestTapPrices : prices}
+          abv={node.custom_abv || node.original_abv}
         />
       )
       })}

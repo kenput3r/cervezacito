@@ -57,7 +57,7 @@ const MenuItem = props => {
       )}
       <TextContainer>
         <Name>{props.name}</Name>
-        <Type>{props.type}</Type>
+        <Type>{props.type}...{props.abv}%</Type>
         <Description>{props.description}</Description>
         <Prices>{props.prices}</Prices>
       </TextContainer>
