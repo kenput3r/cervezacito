@@ -68,6 +68,9 @@ exports.sourceNodes = async({
     }
   })
   onTap.forEach(item => {
+    if(!item.custom_abv) {
+      item.custom_abv = ''
+    }
     item.id = `ot_${item.id}`
     createNode({
       parent: `on-tap-menu`,
