@@ -71,6 +71,9 @@ exports.sourceNodes = async({
     if(!item.custom_abv) {
       item.custom_abv = ''
     }
+    if(!item.custom_name) {
+      item.custom_name = ''
+    }
     item.id = `ot_${item.id}`
     createNode({
       parent: `on-tap-menu`,
