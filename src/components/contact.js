@@ -42,10 +42,11 @@ const Contact = () => {
         <div>
           <p><a href="tel:7148523529">(714) 852-3529</a></p>
           <div className="hours">
-            <p><span>MON - THU:</span> <span>5 PM - 10 PM</span></p>
-            <p><span>FRI:</span> <span>4 PM - 12 AM</span></p>
-            <p><span>SAT:</span> <span>11 AM - 12 AM</span></p>
-            <p><span>SUN:</span> <span>11 AM - 8 PM</span></p>
+            <p><span>MON - WED:</span> <span>4 PM - 10 PM</span></p>
+            <p><span>THU:</span> <span>12 PM - 1 AM</span></p>
+            <p><span>FRI:</span> <span>12 PM - 1 AM</span></p>
+            <p><span>SAT:</span> <span>11 AM - 1 AM</span></p>
+            <p><span>SUN:</span> <span>10 AM - 8 PM</span></p>
           </div>
         </div>
       </div>
